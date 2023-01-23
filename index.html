@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -11,74 +10,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habits</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
 </head>
 <body>
     <header>
         <img src="assets/logo.svg" alt="Logomarca habits">
-    
+        
         <button>
-            <img src="assets/icon-button.svg" alt="Ícone do botão">
-    
-            Registrar &#9728;&#65039;
+            <!-- <img src="assets/icon-button.svg" alt="Ícone plus do botão"> -->
+            <svg 
+                width="20" 
+                height="20" 
+                viewBox="0 0 20 20" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path d="M3.125 10H16.875" stroke="#8B5CF6" stroke-width="1.88" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 3.125V16.875" stroke="#8B5CF6" stroke-width="1.88" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <div>
+                REGISTRAR HOJE
+            </div>
         </button>
     </header>
 
-    <form>
+    <form id="form-habits">
         <div class="habits">
-            <div class="habit">&#128170;</div>
-            <div class="habit">&#127862;</div>
-            <div class="habit">&#127822;</div>
+            <div class="habit" data-name="run"><i class="fa-solid fa-person-running"></i></div>
+            <div class="habit" data-name="water"><i class="fa-solid fa-bottle-water"></i></div>
+            <div class="habit" data-name="bodybuilder"><i class="fa-solid fa-dumbbell"></i></div>
+            <div class="habit" data-name="sleep"><i class="fa-solid fa-bed"></i></i></div>
+            <div class="habit" data-name="dog"><i class="fa-solid fa-dog"></i></div>
+            <div class="habit" data-name="food"><i class="fa-solid fa-apple-whole"></i></div>
         </div>
-        <div class="days">
-            <div class="day">
-                <div>23/01</div>
-                <input type="checkbox" name="workout">
-                <input type="checkbox" name="water">
-                <input type="checkbox" name="food">
-            </div>
-
-            <div class="day">
-                <div>24/01</div>
-                <input type="checkbox" name="workout">
-                <input type="checkbox" name="water">
-                <input type="checkbox" name="food">
-            </div>
-
-            <div class="day">
-                <div>25/01</div>
-                <input type="checkbox" name="workout">
-                <input type="checkbox" name="water">
-                <input type="checkbox" name="food">
-            </div>
-
-            <div class="day">
-                <div>26/01</div>
-                <input type="checkbox" name="workout">
-                <input type="checkbox" name="water">
-                <input type="checkbox" name="food">
-            </div>
-
-            <div class="day">
-                <div>27/01</div>
-                <input type="checkbox" name="workout">
-                <input type="checkbox" name="water">
-                <input type="checkbox" name="food">
-            </div>
-
-            <div class="day">
-                <div>28/01</div>
-                <input type="checkbox" name="workout">
-                <input type="checkbox" name="water">
-                <input type="checkbox" name="food">
-            </div>
-
-            <div class="day">
-                <div>29/01</div>
-                <input type="checkbox" name="workout">
-                <input type="checkbox" name="water">
-                <input type="checkbox" name="food">
-            </div>
-        </div>
+        <div class="days"></div>
     </form>
+
+    <script src="https://kit.fontawesome.com/6953c28971.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -6,13 +6,12 @@
 
 :root {
     font-size: 62.5%;
-
 }
 
 body {
-    background-color: #09090A;
-
     height: 100vh;
+
+    background-color: #09090A;
 
     font-size: 1.6rem;
     color: white;
@@ -22,10 +21,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    width: 100vw;
 
-    /* padding-top: 9.9rem;
-    padding-inline: 12rem; */
-    padding: 9.9rem 12rem 4.8rem;
+    padding: 9.9rem 12rem 0;
+
+    background-color: #09090A;
+
+    position: fixed;
+}
+
+header img {
+    object-position: 0 6px;
 }
 
 button {
@@ -34,9 +41,9 @@ button {
     justify-content: center;
     gap: 1.2rem;
     
-    background-color: transparent;
-    
     padding: 1.6rem 2.4rem;
+
+    background-color: transparent;
 
     border: 1px solid #8B5CF6;
     border-radius: .8rem;
@@ -46,18 +53,36 @@ button {
     font-size: 1.6rem;
     line-height: 125%;
     color: white;
+
+    transition: background .2s;
 }
 
-form {
+button svg path {
+    stroke: white;
+}
+
+button:hover {
+    cursor: pointer;
+
+    background-color: #7C3AED;
+    border: 1px solid #A78BFA;
+
+    filter: brightness(1.1);
+}
+
+#form-habits {
     display: flex;
 
-    padding-inline: 12rem;
+    width: fit-content;
+
+    padding: calc(4.8rem + 18.3rem) 12rem;
 }
 
 .habits {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+
     margin-top: 6rem;
 }
 
@@ -70,15 +95,14 @@ form {
     width: 6.4rem;
     height: 6.4rem;
     
-    border: 1px solid greenyellow;
-
     font-size: 3.2rem;
 }
 
 .days {
     display: flex;
-    margin-left: 3.2rem;
     gap: 4.8rem;
+
+    margin-left: 3.2rem;
 }
 
 .day {
@@ -108,12 +132,25 @@ input {
 
     background-color: #18181B;
 
-    /* border: 2px solid #27272A; */
-    border: 1px solid greenyellow;
+    border: 2px solid #27272A;
     border-radius: .8rem;
 }
 
 input:checked {
     background-color: #8B5CF6;
     border: 2px solid  #A78BFA;
+}
+
+@media(max-width: 57rem) {
+    button svg path {
+        stroke:#8B5CF6;
+    }
+
+    button:hover svg path {
+        stroke: white;
+    }
+
+    button div {
+        display: none;
+    }
 }
