@@ -9,7 +9,7 @@ function add() {
     const date = new Date().toLocaleDateString('pt-br').slice(0, -5);
     const dayExists = nlwSetup.dayExists(date);
 
-    dayExists ? alert(`⚠ Atenção: Já existe registro de ${date} no habits. Tente novamente amanhã.`) : nlwSetup.addDay(date); 
+    dayExists ? alert(`⚠ Atenção: Já existe registro de hoje (${date}) no habits. Tente novamente amanhã.`) : nlwSetup.addDay(date); 
 }
 
 function save() {
